@@ -1,4 +1,4 @@
-name: Octo Organization CI
+name: My Workflow
 
 on:
   push:
@@ -11,7 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout templayte
+        uses: actions/checkout@v3
+        with:
+          repository: jatla991/maven-web-application
+          ref: main
 
-      - name: Run a one-line script
-        run: echo Hello from Octo Organization
+      - name: use - template
+        uses: jatla991/maven-web-application/Template/action.yml@main
