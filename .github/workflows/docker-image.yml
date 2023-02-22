@@ -17,5 +17,5 @@ jobs:
           repository: jatla991/maven-web-application
           ref: main
 
-      - name: use - template
+      - name: use template
         uses: jatla991/maven-web-application/Template/action.yml@main
